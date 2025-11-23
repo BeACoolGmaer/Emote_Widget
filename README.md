@@ -151,7 +151,7 @@ if __name__ == "__main__":
 本项目依赖于以下优秀的开源项目，并因此受到其 `CC BY-NC-SA 4.0` 许可证的约束。
 
 *   **[FreeMote-SDK](https://github.com/Project-AZUSA/FreeMote-SDK)**
-    *   **Author**: [Ulysses](https://github.com/UlyssesWu)  <-- 直接给名字加链接，优雅！
+    *   **Author**: [Ulysses](https://github.com/UlyssesWu)
     *   提供了 JavaScript 端的封装接口与 WebGL 渲染支持。
 *   **[FreeMote](https://github.com/UlyssesWu/FreeMote)**
     *   **Author**: [Ulysses](https://github.com/UlyssesWu)
