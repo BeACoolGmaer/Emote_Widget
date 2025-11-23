@@ -202,7 +202,7 @@
     }
 
     // ==========================================================
-    // ==  5. !! 全新封装的对话框系统 (遵照您的指示) !!
+    // ==  5. 对话框系统
     // ==========================================================
 
     function debouncedUpdateDialogPosition() {
@@ -248,9 +248,7 @@
             document.head.appendChild(styleElement);
             console.log(`[THEME] Style injected into <head>.`);
 
-            // --- !! 关键修正：使用 innerHTML 解开一层 wrapper !! ---
             dialogRoot.innerHTML = htmlElement.innerHTML;
-            // --- 结束修正 ---
 
             console.log(`[THEME] HTML structure unwrapped and injected into #dialog-root.`);
             
@@ -261,20 +259,14 @@
         }
     }
 
-    // --- !! 新增 模块 A.1: DOM 引用获取器 !! ---
     function ensureDialogElements() {
-        // 1. 首先获取我们明确的作用域容器
         const dialogRoot = document.getElementById('dialog-root');
-
-        // 如果连根容器都找不到，这是一个严重的初始化问题
         if (!dialogRoot) {
             console.error("[CRITICAL] Dialog root element '#dialog-root' not found in the DOM.");
-            // 确保全局引用被清空
             dialogContainer = dialogText = dialogBox = null;
             return false;
         }
 
-        // 2. 在这个根容器的 *内部* 进行查找，避免全局污染
         dialogContainer = dialogRoot.querySelector(".dialog-container");
         dialogText = dialogRoot.querySelector("#dialog-text");
         dialogBox = dialogRoot.querySelector(".dialog-box");
@@ -451,7 +443,7 @@
     }
 
 
-    // --- 模块 E: 总指挥官 (Python入口) ---
+    // --- 模块 E: Python入口 ---
     async function showCharacterDialog(text, extra_read_time_ms = 3000, themeName, y_offset_px = -80) {
         await loadDialogTheme(themeName);
         if (!dialogContainer || !dialogText) return;
@@ -613,7 +605,7 @@
             const textureX = Math.floor(x * (RENDER_WIDTH / canvas.clientWidth));
             const textureY = Math.floor(y * (RENDER_HEIGHT / canvas.clientHeight));
             
-            // !! 关键 !! 确保 EmotePlayer.device.readPixelAlpha 存在
+            // 确保 EmotePlayer.device.readPixelAlpha 存在
             if (typeof EmotePlayer.device.readPixelAlpha !== 'function') {
                 // 如果函数不存在，打印一次警告并返回 false，避免持续报错
                 console.warn("isOverCharacter requires 'readPixelAlpha' method in EmoteDevice class.");
@@ -631,7 +623,7 @@
 
     function mapToRange(value, range) {
         const [min, max] = range;
-        // 修正：应该使用 value [-1, 1] 来映射，而不是先转到 [0, 1]
+        // 应该使用 value [-1, 1] 来映射，而不是先转到 [0, 1]
         const center = (max + min) / 2;
         const amplitude = (max - min) / 2;
         return center + value * amplitude;

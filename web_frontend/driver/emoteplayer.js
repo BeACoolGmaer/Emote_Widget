@@ -228,9 +228,6 @@ class EmoteDevice
         // 7. 返回 Alpha 分量
         const alpha = pixelData[3];
         
-        // (可选) 保留最终的确认日志
-        // console.log(`Read Alpha at ${x},${y} (flipped to ${sourceY}) = ${alpha}`);
-        
         return alpha;
     }
     // --- 修改结束 ---

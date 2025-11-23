@@ -1,15 +1,18 @@
+<!-- 
+  DEV TOOL: Splash Screen Simulation
+  Use this file to debug CSS/JS of the splash screen without running the Python backend.
+-->
+  
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Splash Screen Preview</title>
-    
-    <!-- 1. 直接引入启动画面的样式 -->
     <link rel="stylesheet" href="splashscreen/splash_screen.css">
 
     <style>
-        /* 模拟 EmoteWidget 的容器样式 (保持不变) */
+        /* 模拟 EmoteWidget 的容器样式 */
         body {
             display: flex;
             align-items: center;
@@ -47,7 +50,6 @@
 
     <!-- 模拟 EmoteWidget 的容器 -->
     <div id="widget-container">
-        <!-- 2. 直接将 splash_screen.html 的内容粘贴在这里 -->
         <div id="splash-screen">
             <div class="splash-content">
                 <h1 class="splash-title">EmoteWidget <span id="splash-version"></span></h1>
@@ -70,10 +72,10 @@
         </div>
     </div>
 
-    <!-- 3. 在 HTML 结构加载完毕后，引入脚本 -->
+    <!-- 在 HTML 结构加载完毕后，引入脚本 -->
     <script src="splashscreen/splashscreen.js"></script>
     <script>
-        // 4. 定义并执行模拟流程
+        // 定义并执行模拟流程
         async function runSimulation() {
             // 重置状态以便重新运行
             const splash = document.getElementById('splash-screen');

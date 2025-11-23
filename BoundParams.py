@@ -55,7 +55,6 @@ def get_default_map():
 CACHE_DIR = ".emote_cache"
 TOOLS_DIR = "tools"
 VARIABLE_PATTERNS = {
-    # (正则表达式库保持原样)
     "move_lr": r"^move_LR$", "move_ud": r"^move_UD$", "head_lr": r"^head_LR$", "head_ud": r"^head_UD$",
     "head_slant": r"^head_slant$", "body_lr": r"^body_LR$", "body_ud": r"^body_UD$", "body_slant": r"^body_slant$",
     "eye_lr": r"^face_eye_LR$", "eye_ud": r"^face_eye_UD$", "eye_open": r"^face_eye_open$", "eye_special": r"^face_eye_sp$",

@@ -108,6 +108,7 @@ if __name__ == "__main__":
 
 ```
 .
+├── LICENSE          # 本项目许可协议 (CC BY-NC-SA 4.0)
 ├── Emote_Widget.py # 主 SDK 组件
 ├── Tester.py # 功能测试与演示平台
 ├── BoundParams.py # 模型参数解包与缓存模块
@@ -119,7 +120,8 @@ if __name__ == "__main__":
 │ ├── models/ # 存放 .psb 模型文件 (例如 chara.psb)
 │ ├── driver/ # JavaScript 驱动 (已合并到html中)
 │ │ ├ emoteplayer.js # 此为 [Freemote-SDK](https://github.com/Project-AZUSA/FreeMote-SDK) 提供的模型渲染API
-│ │ └ FreeMoteDriver.js # 此为 [Freemote-SDK](https://github.com/Project-AZUSA/FreeMote-SDK) 提供的模型渲染核心
+│ │ ├ FreeMoteDriver.js # 此为 [Freemote-SDK](https://github.com/Project-AZUSA/FreeMote-SDK) 提供的模型渲染核心
+│ │ └ LICENSE.FreeMote.txt # FreeMote 许可协议 (必须与二进制文件同在)
 │ ├── dialogs/ # 对话框皮肤 (例如 default.html)
 │ │ └ default.html # 默认对话框
 │ └── backgrounds/ # 背景图片 (例如 bg.png)
@@ -131,7 +133,8 @@ if __name__ == "__main__":
 │
 └── tools/ # 存放第三方命令行工具
   ├── lib
-  └── PsbDecompile.exe # FreeMote 解包工具，由 BoundParams.py 自动调用
+  ├── PsbDecompile.exe # FreeMote 解包工具，由 BoundParams.py 自动调用
+  └── LICENSE.FreeMote.txt # FreeMote 许可协议 (必须与二进制文件同在)
 ```
 
 ## 📜 许可证 (License)
@@ -145,7 +148,11 @@ if __name__ == "__main__":
 
 ## 🙏 致谢 (Acknowledgements)
 
-本项目依赖于以下优秀的开源项目，并因此受到其 `CC BY-NC-SA 4.0` 许可证的约束。感谢原作者的辛勤工作！
+本项目依赖于以下优秀的开源项目，并因此受到其 `CC BY-NC-SA 4.0` 许可证的约束。
 
 *   **[FreeMote-SDK](https://github.com/Project-AZUSA/FreeMote-SDK)**
+    *   **Author**: [Ulysses](https://github.com/UlyssesWu)  <-- 直接给名字加链接，优雅！
+    *   提供了 JavaScript 端的封装接口与 WebGL 渲染支持。
 *   **[FreeMote](https://github.com/UlyssesWu/FreeMote)**
+    *   **Author**: [Ulysses](https://github.com/UlyssesWu)
+    *   提供了核心的 PSB 模型解析与渲染逻辑。

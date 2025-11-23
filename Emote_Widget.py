@@ -1,3 +1,15 @@
+# -*- coding: utf-8 -*-
+# -----------------------------------------------------------------------------
+# EmoteWidget
+# Copyright (c) 2025 Lemonade233 (O.C.T Technology Department)
+#
+# This work is licensed under the Creative Commons Attribution-NonCommercial-
+# ShareAlike 4.0 International License. To view a copy of this license,
+# visit http://creativecommons.org/licenses/by-nc-sa/4.0/
+#
+# Based on FreeMote by Ulysses (https://github.com/UlyssesWu/FreeMote)
+# -----------------------------------------------------------------------------
+
 
 #版本号这一块
 __version__ = "0.0.1-A"
@@ -504,82 +516,6 @@ class EmoteWidget(QWebEngineView):
 
 
         self.current_model_filename = None # 当前加载的模型文件名
-
-        """
-        self.variable_map = {
-            # 位移与旋转
-            "move_lr": "move_LR",
-            "move_ud": "move_UD",
-            "head_lr": "head_LR",
-            "head_ud": "head_UD",
-            "head_slant": "head_slant",
-            "body_lr": "body_LR",
-            "body_ud": "body_UD",
-            "body_slant": "body_slant",
-
-            # 眼睛
-            "eye_lr": "face_eye_LR",
-            "eye_ud": "face_eye_UD",
-            "eye_open": "face_eye_open",
-            "eye_special": "face_eye_sp",
-            "pupil_special": "face_hitomi_sp",
-
-            # 眉毛
-            "eyebrow_shape": "face_eyebrow",
-            "eyebrow_special": "face_eyebrow_sp",
-
-            # 嘴部
-            "mouth_shape": "face_mouth",
-            "mouth_special": "face_mouth_sp",
-            "mouth_talk": "face_talk",
-
-            # 表情配件
-            "tears": "face_tears",
-            "cheek_blush": "face_cheek",
-            "action_special": "act_sp",
-
-            # 胸部物理
-            "bust_lr": "bust_LR",
-            "bust_ud": "bust_UD",
-            "bust_lr_spare": "bust_LR_spare",
-            "bust_ud_spare": "bust_UD_spare",
-
-            # 头发物理
-            "hair_front_lr": "hair_LR_front",
-            "hair_front_middle_lr": "hair_LR_M_front",
-            "hair_front_ud": "hair_UD_front",
-            "hair_sidel_lr": "hair_LR_sideL",
-            "hair_sidel_middle_lr": "hair_LR_M_sideL",
-            "hair_sidel_ud": "hair_UD_sideL",
-            "hair_sider_lr": "hair_LR_sideR",
-            "hair_sider_middle_lr": "hair_LR_M_sideR",
-            "hair_sider_ud": "hair_UD_sideR",
-            "hair_back_lr": "hair_LR",
-            "hair_back_middle_lr": "hair_LR_M",
-            "hair_back_ud": "hair_UD",
-
-            # 其他物理部件
-            "quake_lr": "quake_LR",
-            "quake_middle_lr": "quake_LR_M",
-            "quake_ud": "quake_UD",
-            "quake_lr_spare": "quake_LR_spare",
-            "quake_middle_lr_spare": "quake_LR_M_spare",
-            "quake_ud_spare": "quake_UD_spare",
-
-            # 部件显隐控制
-            "part_a_fade": "fade_a",
-            "part_b_fade": "fade_b",
-            "part_c_fade": "fade_c",
-            "part_d_fade": "fade_d",
-            "part_e_fade": "fade_e",
-            "part_x_fade": "fade_x",
-            "part_y_fade": "fade_y",
-            "part_z_fade": "fade_z",
-
-            # 选择器变量
-            "arm_selector": "arm_type",
-        }"""
-        #↑历史遗留物品
 
         self.variable_map = BoundParams.get_default_map()
 
