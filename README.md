@@ -108,33 +108,31 @@ if __name__ == "__main__":
 
 ```
 .
-├── LICENSE          # 本项目许可协议 (CC BY-NC-SA 4.0)
-├── Emote_Widget.py # 主 SDK 组件
-├── Tester.py # 功能测试与演示平台
-├── BoundParams.py # 模型参数解包与缓存模块
-├── logger_config.py # 日志配置
-├── requirements.txt # Python 依赖项列表
+├── LICENSE                 # 本项目许可协议 (CC BY-NC-SA 4.0)
+├── Emote_Widget.py         # 主 SDK 组件
+├── Tester.py               # 功能测试与演示平台
+├── BoundParams.py          # 模型参数解包与缓存模块
+├── logger_config.py        # 日志配置
+├── requirements.txt        # Python 依赖项列表
 │
-├── web_frontend/ # 存放所有前端资源
-│ ├── pyside_webview.html # 核心 HTML 页面，用于渲染模型
-│ ├── models/ # 存放 .psb 模型文件 (例如 chara.psb)
-│ ├── driver/ # JavaScript 驱动 (已合并到html中)
-│ │ ├ emoteplayer.js # 此为 [Freemote-SDK](https://github.com/Project-AZUSA/FreeMote-SDK) 提供的模型渲染API
-│ │ ├ FreeMoteDriver.js # 此为 [Freemote-SDK](https://github.com/Project-AZUSA/FreeMote-SDK) 提供的模型渲染核心
-│ │ └ LICENSE.FreeMote.txt # FreeMote 许可协议 (必须与二进制文件同在)
-│ ├── dialogs/ # 对话框皮肤 (例如 default.html)
-│ │ └ default.html # 默认对话框
-│ └── backgrounds/ # 背景图片 (例如 bg.png)
+├── config/
+│ └ config.json             # 语义匹配规则配置文件
 │
-├── plugins/ # 插件目录
-│ ├── plugin_interface.py # 所有插件必须继承的接口
-│ └── debug_tools/ # 示例插件：调试工具
-│   └ main.py # 插件入口
+├── web_frontend/           # 存放所有前端资源
+│ ├── pyside_webview.html   # 核心 HTML 页面，用于渲染模型
+│ ├── models/               # 存放 .psb 模型文件 (例如 chara.psb)
+│ ├── driver/               # JavaScript 驱动 (已合并到html中)
+│ │ ├ emoteplayer.js        # 此为 [Freemote-SDK](https://github.com/Project-AZUSA/FreeMote-SDK) 提供的模型渲染API
+│ │ ├ FreeMoteDriver.js     # 此为 [Freemote-SDK](https://github.com/Project-AZUSA/FreeMote-SDK) 提供的模型渲染核心
+│ │ └ LICENSE.FreeMote.txt  # FreeMote 许可协议 (必须与二进制文件同在)
+│ ├── dialogs/              # 对话框皮肤 (例如 default.html)
+│ │ └ default.html          # 默认对话框
+│ └── backgrounds/          # 背景图片 (例如 bg.png)
 │
-└── tools/ # 存放第三方命令行工具
-  ├── lib
-  ├── PsbDecompile.exe # FreeMote 解包工具，由 BoundParams.py 自动调用
-  └── LICENSE.FreeMote.txt # FreeMote 许可协议 (必须与二进制文件同在)
+└── plugins/                # 插件目录
+  ├── plugin_interface.py   # 所有插件必须继承的接口
+  └── debug_tools/          # 示例插件：调试工具
+    └ main.py               # 插件入口
 ```
 
 ## 📜 许可证 (License)
@@ -151,7 +149,7 @@ if __name__ == "__main__":
 本项目依赖于以下优秀的开源项目，并因此受到其 `CC BY-NC-SA 4.0` 许可证的约束。
 
 *   **[FreeMote-SDK](https://github.com/Project-AZUSA/FreeMote-SDK)**
-    *   **Author**: [Ulysses](https://github.com/UlyssesWu)  <-- 直接给名字加链接，优雅！
+    *   **Author**: [Ulysses](https://github.com/UlyssesWu)
     *   提供了 JavaScript 端的封装接口与 WebGL 渲染支持。
 *   **[FreeMote](https://github.com/UlyssesWu/FreeMote)**
     *   **Author**: [Ulysses](https://github.com/UlyssesWu)

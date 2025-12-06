@@ -578,12 +578,12 @@ class EmoteWidget(QWebEngineView):
                         logger.exception(f"执行缓存指令 '{name}' 时出错。")
                 self._command_queue.clear()
 
-        self._update_splash_main_progress(0.95, f"模型 '{self.current_model_filename}' 已就绪！正在等待插件...")
+        self._update_splash_main_progress(0.6, f"模型 '{self.current_model_filename}' 已就绪！正在等待插件...")
 
         self._player_is_ready = True
-        self.player_ready.emit(timelines)
-        self._check_if_all_ready()
-        logger.debug("_on_player_ready_handler: player_ready signal emitted.")
+        self._update_splash_main_progress(0.9, f"模型 '{self.current_model_filename}' 已就绪！正在分析变量...")
+
+        self._perform_introspection(timelines)
 
     # --- 辅助方法 ---
 
@@ -629,6 +629,33 @@ class EmoteWidget(QWebEngineView):
         
         self._plugins_are_ready = True
         self._check_if_all_ready()
+
+    def _perform_introspection(self, timelines):
+        """
+        获取变量列表，生成或加载映射表。
+        """
+        logger.info("正在执行模型自省...")
+        
+        def on_variables_received(raw_variable_list):
+            if not raw_variable_list:
+                logger.warning("未能获取变量列表，自省失败。将使用空映射。")
+                self.variable_map = {}
+            else:
+                cached_map = BoundParams.get_bound_map(self.current_model_filename)
+                
+                if cached_map:
+                    logger.info("使用缓存的变量映射。")
+                    self.variable_map = cached_map
+                else:
+                    logger.info("无缓存，正在进行语义分析...")
+                    self.variable_map = BoundParams.analyze_variable_list(raw_variable_list)
+                    BoundParams.update_cache(self.current_model_filename, self.variable_map)
+            logger.info(f"自省完成，已绑定 {len(self.variable_map)} 个参数。")
+            self._player_is_ready = True
+            self.player_ready.emit(timelines)
+            self._check_if_all_ready()
+
+        self.get_variables(on_variables_received)
 
     def find_param_by_usage(self, usage_tag: str) -> dict | None:
         """根据特殊用途标签查找参数的完整信息。"""
@@ -747,9 +774,6 @@ class EmoteWidget(QWebEngineView):
         """
         self.current_model_filename = model_filename
         logger.info(f"开始加载模型 '{model_filename}'...")
-        frontend_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), 'web_frontend'))
-        model_path = os.path.join(frontend_dir, 'models', model_filename)
-        self.variable_map = BoundParams.get_bound_map(model_path)
         self.page().runJavaScript(f"loadNewModel('{model_filename}');")
 
     def save_bindings(self):
